@@ -1,0 +1,48 @@
+.footer{
+  background: linear-gradient(180deg, #FAFBFF 0%, #EFF1F9 41.68%, #E9ECF6 49.59%, #CED3E8 93.91%);
+  display: flex;
+  justify-content: center;
+}
+.footer__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer__columns{
+  justify-content: center;
+}
+.footer__logo{
+  max-width: 96px;
+}
+.footer__email{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.footer__email-link{
+  text-align: center;
+  color: #0F81FF;
+}
+.footer__email-paragraph{
+  text-align: center;
+}
+.footer__button{
+  color: #FFFFFF;
+  background-color:#38A5DB;
+  border: 0;
+  border-radius: 23px;
+  padding: 0.75rem 2rem;
+  box-shadow: 0px 12px 44px rgba(56, 165, 219, 0.6);
+}
+.footer__footer-el{
+  padding: 0 4rem;
+  border-right: 1px solid black;
+  margin-bottom: 0;
+  &:last-child{
+    border-right: 0;
+  }
+}
+.footer__column{
+  justify-content: center;
+  display: flex;
+}
