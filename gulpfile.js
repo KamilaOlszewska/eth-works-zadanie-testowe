@@ -37,3 +37,13 @@ gulp.task("sass", function() {
 });
 
 gulp.task("default", gulp.series("serve"));
+var gulp   = require('gulp');
+var deploy = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+    return gulp.src("./prod/**/*")
+        .pipe(deploy({
+            remoteUrl: "https://github.com/KamilaOlszewska/eth-works-zadanie-testowe",
+            branch: "master"
+        }))
+});
