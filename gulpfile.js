@@ -3,6 +3,7 @@ var sass = require("gulp-sass");
 var sourcemaps = require("gulp-sourcemaps");
 var autoprefixer = require("gulp-autoprefixer");
 var browserSync = require("browser-sync").create();
+var deploy = require('gulp-gh-pages');
 
 gulp.task("watch", function(cb) {
     gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
@@ -37,13 +38,9 @@ gulp.task("sass", function() {
 });
 
 gulp.task("default", gulp.series("serve"));
-var gulp   = require('gulp');
-var deploy = require('gulp-gh-pages');
 
-gulp.task('deploy', function () {
-    return gulp.src("./prod/**/*")
-        .pipe(deploy({
-            remoteUrl: "https://github.com/KamilaOlszewska/eth-works-zadanie-testowe",
-            branch: "master"
-        }))
+
+gulp.task('deploy', function() {
+    return gulp.src('./src/**/*')
+        .pipe(deploy());
 });
